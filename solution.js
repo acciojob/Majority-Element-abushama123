@@ -5,8 +5,13 @@ function major(arr)
   var count = [];
   var max;
   for(var i=0;i<n;i++){
-    count[arr[i]] = count[arr[i]] + 1;
-    if(count[arr[i]] > floor(n/2)){
+      if(count[arr[i]] == undefined){
+          count[arr[i]] = 1;
+      }
+      else{
+          count[arr[i]] = count[arr[i]] + 1;
+      }
+    if(count[arr[i]] > Math.floor(n/2)){
       max = arr[i];
     }
   }
